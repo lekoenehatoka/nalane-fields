@@ -197,5 +197,4 @@
     50% { transform: translateY(-12px) rotate(2deg); }
   }
   .spin-slow { animation: spin 30s linear infinite; }
-  }
 }
