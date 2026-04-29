@@ -6,10 +6,9 @@ export const Route = createFileRoute("/vision")({
   head: () => ({
     meta: [
       { title: "Vision & Plan — Nalane Fields" },
-      { name: "description", content: "The mission, business model and long-term vision of Nalane Fields — a sustainable sheep farming enterprise in the Free State." },
+      { name: "description", content: "The mission, business model and long-term vision of Nalane Fields — an ethical sheep farming enterprise being built in the Free State." },
       { property: "og:title", content: "Vision & Plan — Nalane Fields" },
-      { property: "og:description", content: "From a flock of 50 to international export — a long view of ethical farming." },
-      { property: "og:image", content: sunsetField },
+      { property: "og:description", content: "From a focused first flock to international export — a long view of ethical farming." },
     ],
   }),
   component: Vision,
@@ -19,7 +18,7 @@ function Vision() {
   return (
     <>
       <section className="relative min-h-[70svh] flex items-end overflow-hidden">
-        <img src={sunsetField} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={sunsetField} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-10 pb-20 text-cream">
           <Reveal>
@@ -39,9 +38,9 @@ function Vision() {
           </Reveal>
           <Reveal className="md:col-span-6 md:col-start-7" delay={0.1}>
             <p className="font-serif italic text-2xl text-cocoa leading-relaxed">
-              To become a leading, ethically driven sheep farm in South Africa —
-              recognised for sustainable practice, superior product quality, animal
-              welfare, and socio-economic empowerment.
+              To become a leading, ethically driven sheep farming enterprise in
+              South Africa — recognised for sustainable practice, superior product
+              quality, animal welfare, and socio-economic empowerment.
             </p>
           </Reveal>
         </div>
@@ -79,13 +78,13 @@ function Vision() {
           </Reveal>
           <div className="mt-14 divide-y divide-cocoa/15 border-y border-cocoa/15">
             {[
-              ["Land acquisition", "Secure 71 hectares of mixed sweet grass farm in Bloemfontein Rural — listed at R1.9 million — with existing water infrastructure and game fencing."],
-              ["Initial operations", "Begin with 50 grass-fed Dorper sheep (48 ewes and 2 rams), enabling a focused, healthy breeding program."],
-              ["Gradual growth", "Expand the flock toward approximately 80 Dorper sheep, optimising for grazing efficiency and pasture health."],
+              ["Funding & partnerships", "Pursue grant funding and partnerships aligned with empowerment and sustainable agriculture, alongside personal contribution."],
+              ["Initial flock", "Begin with a focused flock of grass-fed Dorper sheep — quality breeding, ethical care, gradual growth."],
               ["Product offering", "Specialise in the sale of live sheep to direct consumers and local markets — never on-farm slaughter."],
+              ["Sustainable scale", "Grow the flock at a pace that protects pasture and animal welfare, never the other way around."],
               ["Market expansion", "Explore international live export markets, supported by future Halal and Kosher certifications."],
               ["Employment", "Create meaningful local employment, beginning with one role and growing alongside the flock."],
-              ["Funding", "Pursue grant funding of approximately R2,131,990 to cover key infrastructure and operational costs, alongside personal contribution."],
+              ["Education", "Share knowledge and contribute to a more transparent, ethical South African farming sector."],
             ].map(([t, b], i) => (
               <Reveal key={t} delay={i * 0.04}>
                 <div className="grid md:grid-cols-12 gap-6 py-8">
@@ -103,8 +102,9 @@ function Vision() {
         <Reveal>
           <h2 className="font-display text-5xl max-w-3xl mx-auto px-6">For grant funders, partners and patient capital.</h2>
           <p className="mt-6 max-w-xl mx-auto text-cream/85">
-            We are actively seeking grant funding aligned with empowerment and sustainable
-            agriculture. The full business plan is available on request.
+            We are actively seeking grant funding and partnerships aligned with
+            empowerment and sustainable agriculture. The full business plan is
+            available on request.
           </p>
           <Link to="/contact" className="mt-10 inline-block px-8 py-4 rounded-full bg-cream text-claret text-[11px] uppercase tracking-[0.3em] hover:bg-ink hover:text-cream transition">
             Request the business plan
