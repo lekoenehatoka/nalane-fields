@@ -44,9 +44,8 @@ function Contact() {
               </a>
             </div>
             <div>
-              <div className="text-[10px] uppercase tracking-[0.4em] text-claret mb-3">Located</div>
+              <div className="text-[10px] uppercase tracking-[0.4em] text-claret mb-3">Based in</div>
               <p className="text-ink text-lg leading-relaxed">
-                Bloemfontein Rural<br />
                 Free State, South Africa
               </p>
             </div>

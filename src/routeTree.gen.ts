@@ -10,8 +10,8 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisionRouteImport } from './routes/vision'
+import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as JournalRouteImport } from './routes/journal'
-import { Route as FarmRouteImport } from './routes/farm'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -21,14 +21,14 @@ const VisionRoute = VisionRouteImport.update({
   path: '/vision',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PhilosophyRoute = PhilosophyRouteImport.update({
+  id: '/philosophy',
+  path: '/philosophy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JournalRoute = JournalRouteImport.update({
   id: '/journal',
   path: '/journal',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FarmRoute = FarmRouteImport.update({
-  id: '/farm',
-  path: '/farm',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -51,16 +51,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/farm': typeof FarmRoute
   '/journal': typeof JournalRoute
+  '/philosophy': typeof PhilosophyRoute
   '/vision': typeof VisionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/farm': typeof FarmRoute
   '/journal': typeof JournalRoute
+  '/philosophy': typeof PhilosophyRoute
   '/vision': typeof VisionRoute
 }
 export interface FileRoutesById {
@@ -68,22 +68,28 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/farm': typeof FarmRoute
   '/journal': typeof JournalRoute
+  '/philosophy': typeof PhilosophyRoute
   '/vision': typeof VisionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/farm' | '/journal' | '/vision'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/journal'
+    | '/philosophy'
+    | '/vision'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/farm' | '/journal' | '/vision'
+  to: '/' | '/about' | '/contact' | '/journal' | '/philosophy' | '/vision'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
-    | '/farm'
     | '/journal'
+    | '/philosophy'
     | '/vision'
   fileRoutesById: FileRoutesById
 }
@@ -91,8 +97,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  FarmRoute: typeof FarmRoute
   JournalRoute: typeof JournalRoute
+  PhilosophyRoute: typeof PhilosophyRoute
   VisionRoute: typeof VisionRoute
 }
 
@@ -105,18 +111,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VisionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/philosophy': {
+      id: '/philosophy'
+      path: '/philosophy'
+      fullPath: '/philosophy'
+      preLoaderRoute: typeof PhilosophyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/journal': {
       id: '/journal'
       path: '/journal'
       fullPath: '/journal'
       preLoaderRoute: typeof JournalRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/farm': {
-      id: '/farm'
-      path: '/farm'
-      fullPath: '/farm'
-      preLoaderRoute: typeof FarmRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -147,8 +153,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  FarmRoute: FarmRoute,
   JournalRoute: JournalRoute,
+  PhilosophyRoute: PhilosophyRoute,
   VisionRoute: VisionRoute,
 }
 export const routeTree = rootRouteImport

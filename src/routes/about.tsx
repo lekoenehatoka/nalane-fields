@@ -38,10 +38,10 @@ function About() {
       <section className="pb-24 bg-cream">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid md:grid-cols-2 gap-6">
           <Reveal>
-            <img src={sheepStanding} alt="" className="w-full aspect-[4/5] object-cover" />
+            <img src={sheepStanding} alt="" aria-hidden className="w-full aspect-[4/5] object-cover" />
           </Reveal>
           <Reveal delay={0.1} className="flex flex-col justify-end gap-6">
-            <img src={sheepPortrait} alt="" className="w-full aspect-square object-cover" />
+            <img src={sheepPortrait} alt="" aria-hidden className="w-full aspect-square object-cover" />
           </Reveal>
         </div>
       </section>

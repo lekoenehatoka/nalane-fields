@@ -6,9 +6,9 @@ export const Route = createFileRoute("/journal")({
   head: () => ({
     meta: [
       { title: "Journal — Nalane Fields" },
-      { name: "description", content: "Notes from the early days of Nalane Fields — building a sheep farm from paper to pasture." },
+      { name: "description", content: "Notes from the early days of Nalane Fields — building an ethical sheep farming enterprise from the ground up." },
       { property: "og:title", content: "Journal — Nalane Fields" },
-      { property: "og:description", content: "Field notes from a farm in the making." },
+      { property: "og:description", content: "Reflections from a farming enterprise in the making." },
     ],
   }),
   component: Journal,
@@ -16,22 +16,22 @@ export const Route = createFileRoute("/journal")({
 
 const entries = [
   {
-    date: "July 2025",
+    date: "2025",
     title: "On paper.",
-    body: "The business plan is complete: 71 hectares, 50 sheep to begin, a path toward eighty. It feels strange to see something so alive written in tables and projections — but every farm starts here.",
+    body: "The business plan is complete. It feels strange to see something so alive written in tables and projections — but every farm starts here.",
   },
   {
-    date: "August 2025",
+    date: "2025",
     title: "Why grass-fed.",
     body: "Grass-fed isn't a marketing line, it's a system. It means slower growth, healthier animals, and pasture that gives back what is taken. It is the only way we have ever wanted to do this.",
   },
   {
-    date: "September 2025",
-    title: "On Bloemfontein.",
-    body: "Mixed sweet grass plains. Five hundred and fifty millimetres of rain. A windmill, a dam, a tank. Twenty-five kilometres of tar from town. The land has been waiting.",
+    date: "2025",
+    title: "Why ethical.",
+    body: "We believe a farm should be answerable — to the animals it raises, to the land it stands on, and to the people it feeds. Transparency is not a feature; it is the standard.",
   },
   {
-    date: "October 2025",
+    date: "2025",
     title: "Naming the brand.",
     body: "A sunflower for devotion and light. An oval frame for a sacred, contained space. Forum lettering — calm confidence, not doing too much.",
   },
@@ -48,7 +48,7 @@ function Journal() {
               Notes from the early days.
             </h1>
             <p className="mt-8 max-w-xl font-serif italic text-xl text-cocoa">
-              Short reflections on building a farm before the first sheep arrives.
+              Short reflections on building an ethical sheep farming enterprise — before the first sheep arrives.
             </p>
           </Reveal>
         </div>
@@ -73,7 +73,7 @@ function Journal() {
       </section>
 
       <section className="relative py-32 overflow-hidden">
-        <img src={sunsetField} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={sunsetField} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ink/55" />
         <Reveal>
           <p className="relative font-display text-3xl md:text-5xl text-cream text-center max-w-3xl mx-auto px-6 leading-snug">

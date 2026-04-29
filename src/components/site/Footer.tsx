@@ -25,7 +25,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li><Link to="/about" className="hover:opacity-70 transition">About</Link></li>
               <li><Link to="/vision" className="hover:opacity-70 transition">Vision</Link></li>
-              <li><Link to="/farm" className="hover:opacity-70 transition">The Farm</Link></li>
+              <li><Link to="/philosophy" className="hover:opacity-70 transition">Philosophy</Link></li>
               <li><Link to="/journal" className="hover:opacity-70 transition">Journal</Link></li>
               <li><Link to="/contact" className="hover:opacity-70 transition">Contact</Link></li>
             </ul>
@@ -34,7 +34,7 @@ export function Footer() {
           <div>
             <h4 className="text-[11px] uppercase tracking-[0.32em] mb-5 opacity-80">Reach Us</h4>
             <ul className="space-y-3 text-sm">
-              <li>Bloemfontein Rural,<br />Free State, South Africa</li>
+              <li>Free State, South Africa</li>
               <li><a href="mailto:admin@nalanefields.co.za" className="underline-offset-4 hover:underline">admin@nalanefields.co.za</a></li>
             </ul>
           </div>

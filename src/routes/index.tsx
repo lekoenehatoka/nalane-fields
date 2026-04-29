@@ -5,18 +5,16 @@ import sheepPortrait from "@/assets/sheep-portrait.jpg";
 import sheepStanding from "@/assets/sheep-standing.jpg";
 import sunsetField from "@/assets/sunset-field.jpg";
 import hillsSheep from "@/assets/hills-sheep.jpg";
-import lambsBarn from "@/assets/lambs-barn.jpg";
-import cornField from "@/assets/corn-field.jpg";
 import logo from "@/assets/logo.png";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nalane Fields — Ethical Sheep Farming in the Free State" },
-      { name: "description", content: "A new chapter in South African agriculture. Grass-fed Dorper sheep, raised with care near Bloemfontein. 100% Black woman-owned, BEE compliant." },
+      { title: "Nalane Fields — Ethical Sheep Farming, Free State" },
+      { name: "description", content: "A new chapter in South African agriculture. Ethically raised, grass-fed Dorper sheep. 100% Black woman-owned, BEE compliant." },
       { property: "og:title", content: "Nalane Fields — Ethical Sheep Farming" },
-      { property: "og:description", content: "Grass-fed Dorper sheep raised with care near Bloemfontein, Free State." },
+      { property: "og:description", content: "Ethically raised, grass-fed Dorper sheep from the Free State." },
     ],
   }),
   component: Home,
@@ -33,12 +31,13 @@ function Home() {
     <>
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-[100svh] -mt-20 pt-20 overflow-hidden bg-cream">
-        <motion.div style={{ y: y1 }} className="absolute inset-0">
+        <motion.div style={{ y: y1 }} className="absolute inset-0" aria-hidden>
           <img src={sunsetField} alt="" className="w-full h-full object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-cream via-cream/40 to-cream" />
         </motion.div>
 
         <motion.div
+          aria-hidden
           className="absolute right-[-80px] top-32 w-[420px] h-[420px] rounded-full bg-claret/10 blur-3xl"
           style={{ y: y2 }}
         />
@@ -72,15 +71,15 @@ function Home() {
             className="mt-12 grid md:grid-cols-2 gap-12 max-w-5xl"
           >
             <p className="font-serif italic text-xl text-cocoa leading-relaxed">
-              Nalane Fields is a sheep farming enterprise being built on 71 hectares
-              of mixed sweet grass plains near Bloemfontein — a place where animals
-              are raised slowly, ethically, and well.
+              Nalane Fields is a sheep farming enterprise being built around a single
+              idea — that animals can be raised slowly, ethically, and well, and that
+              business can be done the same way.
             </p>
             <div className="flex flex-col gap-5 md:items-end">
               <div className="text-sm text-ink/70 max-w-sm md:text-right">
                 Founded 2025. Registered. BEE compliant.
-                100% Black woman-owned. Currently in pre-operational phase,
-                pursuing land acquisition and grant funding.
+                100% Black woman-owned. Currently in pre-operational
+                phase, pursuing grant funding and partnerships.
               </div>
               <div className="flex gap-3">
                 <Link to="/vision" className="px-7 py-3.5 rounded-full bg-claret text-cream text-[11px] uppercase tracking-[0.3em] hover:bg-ink transition-all">
@@ -107,7 +106,7 @@ function Home() {
             <div key={i} className="flex gap-16 items-center text-lg">
               <span>GRASS-FED DORPER SHEEP</span>
               <span className="opacity-50">✦</span>
-              <span>BLOEMFONTEIN, FREE STATE</span>
+              <span>FREE STATE, SOUTH AFRICA</span>
               <span className="opacity-50">✦</span>
               <span>ETHICALLY RAISED</span>
               <span className="opacity-50">✦</span>
@@ -126,16 +125,16 @@ function Home() {
           <Reveal className="lg:col-span-4 lg:sticky lg:top-32">
             <div className="text-[11px] uppercase tracking-[0.4em] text-claret">— I. Mission</div>
             <h2 className="mt-6 font-display text-5xl text-ink leading-tight">
-              A small farm with a long view.
+              A small enterprise with a long view.
             </h2>
           </Reveal>
 
           <div className="lg:col-span-7 lg:col-start-6 space-y-10">
             <Reveal>
               <p className="font-serif text-2xl text-cocoa leading-relaxed">
-                To establish a thriving, ethical sheep farm that delivers premium
-                livestock while promoting sustainable agriculture and empowering
-                local communities through job creation and education.
+                To build a thriving, ethical sheep farming enterprise that delivers
+                premium livestock while promoting sustainable agriculture and
+                empowering local communities through job creation and education.
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -144,7 +143,7 @@ function Home() {
             <Reveal delay={0.2}>
               <div className="grid sm:grid-cols-2 gap-10">
                 {[
-                  ["Sustainability", "Practices that protect the land and ensure long-term viability."],
+                  ["Sustainability", "Practices that protect the environment and ensure long-term viability."],
                   ["Animal welfare", "Humane treatment through grass-fed systems and ethical care."],
                   ["Quality", "A superior product, raised to the highest standards."],
                   ["Empowerment", "Local economic development through jobs and skills transfer."],
@@ -160,18 +159,18 @@ function Home() {
         </div>
       </section>
 
-      {/* IMAGE DUET */}
+      {/* IMAGE DUET — purely atmospheric */}
       <section className="bg-cream pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid md:grid-cols-12 gap-6">
           <Reveal className="md:col-span-7">
             <div className="relative overflow-hidden rounded-[2px] aspect-[4/5] md:aspect-[5/6]">
-              <img src={sheepStanding} alt="A sheep on the farm" className="w-full h-full object-cover" />
+              <img src={sheepStanding} alt="" aria-hidden className="w-full h-full object-cover" />
             </div>
           </Reveal>
           <div className="md:col-span-5 flex flex-col justify-end gap-6">
             <Reveal>
               <div className="relative overflow-hidden rounded-[2px] aspect-square">
-                <img src={sheepPortrait} alt="Wool, up close" className="w-full h-full object-cover" />
+                <img src={sheepPortrait} alt="" aria-hidden className="w-full h-full object-cover" />
               </div>
             </Reveal>
             <Reveal delay={0.1}>
@@ -183,36 +182,31 @@ function Home() {
         </div>
       </section>
 
-      {/* THE LAND */}
+      {/* THE WORK — no land specifics */}
       <section className="bg-ink text-cream py-32 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-25" aria-hidden>
           <img src={hillsSheep} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/70 to-ink" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
-            <div className="text-[11px] uppercase tracking-[0.4em] text-cream/70">— II. The Land</div>
+            <div className="text-[11px] uppercase tracking-[0.4em] text-cream/70">— II. The Work</div>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 font-display text-6xl md:text-7xl max-w-4xl leading-[1.05]">
-              Seventy-one hectares of <em className="text-claret/90 font-normal">mixed sweet grass</em>, just outside Bloemfontein.
+              <em className="text-claret/90 font-normal">Grass-fed</em> Dorper sheep, raised the long way.
             </h2>
           </Reveal>
 
-          <div className="mt-20 grid md:grid-cols-4 gap-x-8 gap-y-12">
+          <div className="mt-20 grid md:grid-cols-3 gap-x-8 gap-y-12">
             {[
-              ["71 ha", "of mixed sweet grass plains"],
-              ["550 mm", "average annual rainfall"],
-              ["1 GVE / 6 ha", "a favourable drag rate"],
-              ["25 km", "of tar road from Bloemfontein"],
-              ["1 windmill", "with dam and water tank"],
-              ["2.1 m", "perimeter game fencing"],
-              ["50 → 80", "Dorper sheep, gradual growth"],
-              ["Solar", "off-grid power planned"],
+              ["Direct", "Live sheep sold directly to consumers — never on-farm slaughter."],
+              ["Local", "Supplying shops and markets across the Free State with consistent quality."],
+              ["Future", "Pursuing Halal and Kosher pathways toward international live export."],
             ].map(([n, d]) => (
               <Reveal key={n}>
                 <div className="border-t border-cream/20 pt-6">
-                  <div className="font-display text-4xl text-cream">{n}</div>
+                  <div className="font-display text-3xl text-cream">{n}</div>
                   <div className="mt-2 text-sm text-cream/70 leading-relaxed">{d}</div>
                 </div>
               </Reveal>
@@ -221,8 +215,8 @@ function Home() {
 
           <Reveal delay={0.2}>
             <div className="mt-20 flex justify-end">
-              <Link to="/farm" className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-cream hover:text-claret transition">
-                Walk the farm <span aria-hidden>→</span>
+              <Link to="/philosophy" className="inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-cream hover:text-claret transition">
+                Read our philosophy <span aria-hidden>→</span>
               </Link>
             </div>
           </Reveal>
@@ -240,10 +234,10 @@ function Home() {
           <div className="mt-20 relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-cocoa/25" />
             {[
-              ["2025", "Foundation", "Company registered. Business plan completed. Brand and identity defined. First personal contribution toward land secured."],
-              ["2026", "Land Acquisition", "Final purchase of 71-hectare farm in Bloemfontein Rural. Pursuit of grant funding for infrastructure and operations."],
-              ["2027", "First Flock", "Initial 50 grass-fed Dorper sheep — 48 ewes and 2 rams. Solar power, basic sheep barn, and first hire."],
-              ["2028+", "Growth", "Expansion toward 80 sheep. Halal and Kosher pathways. Exploring international live export markets."],
+              ["2025", "Foundation", "Company registered. Business plan completed. Brand and identity defined."],
+              ["2026", "Groundwork", "Pursuit of grant funding and partnerships. Building the relationships and resources required to begin."],
+              ["2027", "First Flock", "Establish an initial grass-fed Dorper flock under a focused breeding program. First hire."],
+              ["2028+", "Growth", "Scale the flock with care. Pursue Halal and Kosher pathways. Explore international live export markets."],
             ].map(([year, title, body], i) => (
               <Reveal key={year} delay={i * 0.05}>
                 <div className={`relative grid md:grid-cols-2 gap-8 mb-16 md:mb-20 ${i % 2 ? "md:[&>div:first-child]:order-2" : ""}`}>
@@ -266,9 +260,9 @@ function Home() {
       <section className="py-32 bg-secondary">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img src={lambsBarn} alt="Young lambs in the barn" className="w-full h-full object-cover" />
-              <div className="absolute bottom-6 left-6 right-6 bg-cream/90 backdrop-blur p-6">
+            <div className="relative aspect-square overflow-hidden bg-cream flex items-center justify-center p-12">
+              <img src={logo} alt="Nalane Fields logo" className="w-full h-full object-contain" />
+              <div className="absolute bottom-6 left-6 right-6 bg-cream/90 backdrop-blur p-6 ring-1 ring-cocoa/10">
                 <div className="text-[10px] uppercase tracking-[0.4em] text-claret">Founder</div>
                 <div className="mt-2 font-display text-2xl text-ink">Tokelo Lekoeneha</div>
                 <div className="text-sm text-cocoa mt-1">Animal Health · Sheep & Wool Production</div>
@@ -278,7 +272,7 @@ function Home() {
           <Reveal className="lg:col-span-6 lg:col-start-7" delay={0.1}>
             <div className="text-[11px] uppercase tracking-[0.4em] text-claret">— IV. The Founder</div>
             <h2 className="mt-6 font-display text-5xl text-ink leading-tight">
-              A twenty-year-old agriculture student, building something that lasts.
+              An agriculture student, building something meant to last.
             </h2>
             <p className="mt-8 text-lg text-cocoa leading-relaxed">
               Nalane Fields is the work of one woman with two specialisations —
@@ -286,9 +280,9 @@ function Home() {
               that South African farming can be ethical, transparent, and proudly local.
             </p>
             <p className="mt-5 text-cocoa leading-relaxed">
-              The farm will start small and grow on its own terms. No on-farm
-              slaughter. No shortcuts. A real flock, on real grass, sold to
-              people who care where their livestock comes from.
+              The enterprise will start small and grow on its own terms. No
+              on-farm slaughter. No shortcuts. A real flock, sold to people who
+              care where their livestock comes from.
             </p>
           </Reveal>
         </div>
@@ -296,10 +290,10 @@ function Home() {
 
       {/* CTA */}
       <section className="bg-claret text-cream py-32 relative overflow-hidden grain">
-        <div className="absolute -right-40 -top-40 w-[500px] h-[500px] rounded-full border border-cream/20 spin-slow" />
-        <div className="absolute -right-20 -top-20 w-[300px] h-[300px] rounded-full border border-cream/10 spin-slow" style={{ animationDirection: "reverse" }} />
+        <div className="absolute -right-40 -top-40 w-[500px] h-[500px] rounded-full border border-cream/20 spin-slow" aria-hidden />
+        <div className="absolute -right-20 -top-20 w-[300px] h-[300px] rounded-full border border-cream/10 spin-slow" style={{ animationDirection: "reverse" }} aria-hidden />
         <div className="relative mx-auto max-w-5xl px-6 lg:px-10 text-center">
-          <img src={logo} alt="" className="h-24 w-24 mx-auto rounded-full object-cover ring-1 ring-cream/40 float-slow" />
+          <img src={logo} alt="Nalane Fields" className="h-24 w-24 mx-auto rounded-full object-cover ring-1 ring-cream/40 float-slow" />
           <h2 className="mt-10 font-display text-5xl md:text-6xl leading-tight">
             We are at the beginning. <em className="font-normal opacity-80">Walk it with us.</em>
           </h2>
