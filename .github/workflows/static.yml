@@ -25,12 +25,13 @@ jobs:
         run: bun install
 
       - name: Build project
-        run: bun run build
+        # This line is the magic fix for TanStack Start on GitHub Pages
+        run: bun run build --output=static
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This tells GitHub exactly where your finished files are
+          # Try both common output locations just in case
           path: ./.output/public
 
   deploy:
