@@ -32,8 +32,8 @@ const entries = [
   },
   {
     date: "2025",
-    title: "Naming the brand.",
-    body: "A sunflower for devotion and light. An oval frame for a sacred, contained space. Forum lettering — calm confidence, not doing too much.",
+    title: "Our brand.",
+    body: "Nalane Fields is about building a lasting legacy through honest work, ethical farming, and a life that stays aligned with what is right.",
   },
 ];
 

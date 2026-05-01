@@ -59,9 +59,9 @@ function Home() {
             transition={{ duration: 1.2, delay: 0.2 }}
             className="mt-8 font-display text-[clamp(3rem,9vw,8.5rem)] leading-[0.95] text-ink text-balance max-w-5xl"
           >
-            Of soil, sun, <em className="text-claret font-normal">and</em>
+            Raised with <em className="text-claret font-normal">care,</em>
             <br />
-            quiet devotion.
+            grown with purpose.
           </motion.h1>
 
           <motion.div
