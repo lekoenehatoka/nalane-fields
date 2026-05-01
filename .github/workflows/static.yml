@@ -1,4 +1,4 @@
-name: Deploy TanStack Site
+name: Deploy Lovable Site
 on:
   push:
     branches: ["main"]
@@ -25,14 +25,14 @@ jobs:
         run: bun install
 
       - name: Build project
-        # This line is the magic fix for TanStack Start on GitHub Pages
-        run: bun run build --output=static
+        # This is the standard Vite build command
+        run: bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Try both common output locations just in case
-          path: ./.output/public
+          # Lovable/Vite projects always build into 'dist'
+          path: ./dist
 
   deploy:
     needs: build
