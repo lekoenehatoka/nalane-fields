@@ -52,8 +52,8 @@ function Contact() {
             <div>
               <div className="text-[10px] uppercase tracking-[0.4em] text-claret mb-3">For grant funders</div>
               <p className="text-cocoa leading-relaxed">
-                Our full business plan, financial projections, and supporting
-                documentation are available on request. Please reach out via email.
+                Our full business plan and supporting documentation are
+                available on request. Please reach out via email.
               </p>
             </div>
             <div className="pt-8 border-t border-cocoa/20 text-xs text-cocoa/70 space-y-1">
