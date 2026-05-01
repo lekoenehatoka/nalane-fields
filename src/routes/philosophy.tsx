@@ -7,7 +7,7 @@ export const Route = createFileRoute("/philosophy")({
   head: () => ({
     meta: [
       { title: "Philosophy — Nalane Fields" },
-      { name: "description", content: "The principles behind Nalane Fields — ethical, grass-fed sheep farming, animal welfare, sustainability, and quiet, unhurried craft." },
+      { name: "description", content: "The principles behind Nalane Fields — ethical, grass-fed sheep farming, animal welfare, sustainability, and unhurried craft." },
       { property: "og:title", content: "Philosophy — Nalane Fields" },
       { property: "og:description", content: "How we intend to farm: slowly, kindly, transparently." },
     ],
