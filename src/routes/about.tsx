@@ -95,7 +95,7 @@ function About() {
       <section className="py-24 bg-ink text-cream text-center">
         <Reveal>
           <h2 className="font-display text-4xl md:text-5xl max-w-3xl mx-auto px-6">
-            Built on faith, growth, and quiet strength.
+            Built on faith, growth, and steady strength.
           </h2>
           <Link to="/vision" className="mt-10 inline-block px-8 py-4 rounded-full bg-claret text-cream text-[11px] uppercase tracking-[0.3em] hover:bg-cream hover:text-claret transition">
             See the vision
