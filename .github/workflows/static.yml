@@ -30,8 +30,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Vite usually builds into the 'dist' folder
-          path: ./dist
+          # This tells GitHub exactly where your finished files are
+          path: ./.output/public
 
   deploy:
     needs: build
